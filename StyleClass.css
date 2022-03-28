@@ -1,0 +1,238 @@
+body{
+  background-color: #d9d8e5;
+  margin:10px;
+}
+
+.container-header{
+    display: grid;
+    grid-template-columns: 90% 10%;
+    width: 100%;
+    height: 13%;
+    margin:.5px 0px;
+    padding: 9.5px;
+    background-color: #f8f8f8;
+}
+h4{
+  margin: 1rem auto;
+}
+
+span{
+  font-size: small;
+}
+.search-grid{
+  background-color: #f8f8f8;
+  margin: auto;
+  height: 20%!important;
+}
+
+button.addbutton{
+    margin: 5px;
+    height: 50px;
+}
+
+.container-body{
+    width:100%;
+    height: 90%;
+  /*  background-color: beige; */
+}
+.container-sidebar{
+    background-color:#b1d2fc;
+}
+/* The Modal (background) */
+.modal {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    overflow: auto; /* Enable scroll if needed */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+  }
+  .show
+  {
+      display: block;
+  }
+  .hide
+  {
+      display: none;
+  }
+  .error{
+    color: red;
+  }
+  .success{
+    color: green;
+  }
+  /* The Modal-1 (background) */
+.modal1 {
+    display:none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    /* Enable scroll if needed */
+    /*overflow: auto;*/ 
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto auto auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #best-books-form, .search-grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width:100%;
+    height:10%;
+    margin:.5px 0px;
+    padding: 2.5px;
+  }
+
+  img{
+    height : 100px;
+    width: 40px;
+  }
+
+  /*Card Details*/
+  
+  .card{
+      display: grid;
+      grid-template-columns: 34% 66%;
+      margin: 0.1rem;
+      background-color: rgb(167, 196, 250);
+      height: 11rem;
+  }
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .modal-content{
+    width: 90%!important;;
+  }
+
+  .loader {
+    position: relative;
+    margin: 0 auto;
+    width: 100px;
+  }
+  .loader:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+  
+  .circular {
+    -webkit-animation: rotate 2s linear infinite;
+            animation: rotate 2s linear infinite;
+    height: 100%;
+    transform-origin: center center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  
+  .path {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+            animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    stroke-linecap: round;
+  }
+  
+  @-webkit-keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes dash {
+    0% {
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 89, 200;
+      stroke-dashoffset: -35px;
+    }
+    100% {
+      stroke-dasharray: 89, 200;
+      stroke-dashoffset: -124px;
+    }
+  }
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 89, 200;
+      stroke-dashoffset: -35px;
+    }
+    100% {
+      stroke-dasharray: 89, 200;
+      stroke-dashoffset: -124px;
+    }
+  }
+  @-webkit-keyframes color {
+    100%, 0% {
+      stroke: #d62d20;
+    }
+    40% {
+      stroke: #0057e7;
+    }
+    66% {
+      stroke: #008744;
+    }
+    80%, 90% {
+      stroke: #ffa700;
+    }
+  }
+  @keyframes color {
+    100%, 0% {
+      stroke: #d62d20;
+    }
+    40% {
+      stroke: #0057e7;
+    }
+    66% {
+      stroke: #008744;
+    }
+    80%, 90% {
+      stroke: #ffa700;
+    }
+  }

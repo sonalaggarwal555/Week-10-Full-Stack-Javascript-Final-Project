@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <title>BOOK CATALOG</title>
+        <link rel="stylesheet" href="StyleClass.css">  
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+      </head>
+    <body>
+        <div class="container-fluid">
+            <div class="container-header">
+                <h4>Welcome To Your Library</h4>
+                <button type="button" id="login-btn" class="addbutton">Create Login</button>
+            </div>
+            <!-- To Test Set Timeout -->
+            <div id="maintenance-notice" class="bg-warning py-3">
+              <div class="container">
+                <h2>Notice:</h2>
+                <p>Site will be down for maintenance Monday March 24</p>
+                <span id="maintenance-notice-timerinfo"></span>
+              </div>
+            </div>
+            <div class="container-body">
+
+                <div class="container-main">
+                    <!-- The Modal -->
+                    <div id="welcomeModal" class="modal hide">
+                    
+                      <!-- Modal content -->
+                      <div class="modal-content">
+                        <span class="close" id="closeWelcomeModal">&times;</span> 
+                        <p>Welcome to Book Library</p>
+                      </div>
+                    </div>
+
+                    <!-- Books for Sale Search by Date/Month/Year-->
+                    <div>
+
+                      <div class="search-grid">
+
+                        <form id="best-books-form" style="background-color:#f8f8f8">
+
+                        <div style="margin:0rem 1rem">
+                          <label for="date">Date:</label>
+                          <input id="date" name="date" class="form-control" type="text" placeholder="11" pattern="\d{2}"/>
+                        </div>
+
+                        <div style="margin:0rem 1rem"> 
+                          <label for="month">Month</label>
+                          <input id="month" name="month" class="form-control" type="text" pattern="\d{2}" placeholder="03"/>
+                        </div>
+
+                        <div style="margin:0rem 1rem">
+                          <label for="year">Year:</label>
+                          <input id="year" name="year" class="form-control" type="text" pattern="\d{4}" placeholder="2019" />
+                        </div>
+
+                        <div style="margin:0rem 1rem">
+                          <input id="submit" class="btn btn-primary" type="submit" value="Get Books" style="margin-top:2rem"/>
+                        </div>  
+
+                        </form>
+                      </div>
+
+                      <div class="loader" id="loading-icon" style="display: none;">
+                        <svg class="circular" viewBox="25 25 50 50">
+                          <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                        </svg>
+                      </div>
+
+                      <div id="books-container" style="margin-top:30px">
+                        <!--Books Array-->
+
+                      </div>
+
+                  <!--Modal 3 CREATE LOGIN -->
+                    <div id="login-modal" class="modal1">
+                    
+                      <!-- Modal content -->
+                      <div class="modal-content">
+                        <div style="display:grid;grid-template-columns:90% 10%">  
+                          <p>SIGNUP</p>
+                          <span id="close-login-btn" class="close">&times;</span>
+                          
+                          <small class="success" aria-live="polite"></small>
+                        </div>
+
+                        <!--Form Validation-->
+                        <form id="connect-form" action="" method="post">
+                          <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input
+                              id="first-name"
+                              class="form-control validate-input"
+                              type="text"
+                              name="first-name"
+                              
+                            />
+                            <small class="error" aria-live="polite"></small>
+                          </div>
+                      
+                          <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input
+                              id="last-name"
+                              class="form-control validate-input"
+                              type="text"
+                              name="last-name"
+                              
+                            />
+                            <small class="error" aria-live="polite"></small>
+                          </div>
+                      
+                          <div class="form-group">
+                            <label for="email">Email</label>
+                            <input
+                              id="email"
+                              class="form-control validate-input"
+                              type="email"
+                              name="email"
+                            />
+                            <small class="error" aria-live="polite"></small>
+                          </div>
+                      
+                          <div class="form-group">
+                            <input class="btn btn-primary" type="submit" value="Sign up" />
+                          </div>
+                        </form>
+
+                        <!--Form Validation-->
+                      </div>
+                    </div>
+
+                    </div>
+            </div>
+        </div>
+        <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="fetch-api-key.js"></script>
+    <script src="First-Page-JS.js"></script>
+    </body>
+</html>
